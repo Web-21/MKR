@@ -1,4 +1,4 @@
-// styles.scss
+
 
 $primary-color: #007bff;
 $text-color-light: #fff;
@@ -38,7 +38,7 @@ $text-color-muted: #6c757d;
   }
 }
 
-// Медіа-запити для адаптивності
+
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
