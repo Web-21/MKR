@@ -1,0 +1,102 @@
+/* CSS Variables */
+:root {
+    --primary-color: #007bff;
+    --input-padding: 10px;
+    --border-radius: 4px;
+    --font-family: Arial, sans-serif;
+    --form-width: 280px;
+    --input-margin-bottom: 10px;
+}
+
+/* Block: signup */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.signup {
+    width: var(--form-width);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Element: signup__title */
+.signup__title {
+    margin: 0 0 15px;
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Element: signup__form */
+.signup__form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Element: signup__row */
+.signup__row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: var(--input-margin-bottom);
+}
+
+/* Element: signup__input */
+.signup__input {
+    padding: var(--input-padding);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: var(--input-margin-bottom);
+}
+
+/* Убираем нижний отступ между именем/фамилией и следующим полем */
+.signup__input--no-margin {
+    margin-bottom: 10px;
+}
+
+/* Checkbox row styling */
+.signup__row--checkbox {
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Element: signup__checkbox */
+.signup__checkbox {
+    margin-right: 5px;
+}
+
+/* Element: signup__label */
+.signup__label {
+    font-size: 14px;
+}
+
+/* Element: signup__button */
+.signup__button {
+    padding: var(--input-padding);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signup__button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* Media Queries */
+@media (max-width: 320px) {
+    .signup {
+        width: 90%;
+    }
+}
