@@ -1,0 +1,18 @@
+main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    width: 200px;
+    height: 80px;
+    margin-top: 40px;
+    background-color: brown;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+ .content-in-progress, .content-pause, .content-disconnect, .content-finish{
+    display: none;
+}
