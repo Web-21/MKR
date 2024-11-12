@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        .bodySTYLE{
+            margin: 0;
+        }
+        /* Основні стилі для навігації */
+        .navbar {
+            margin: 0%;
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+           
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Підменю, приховане за замовчуванням */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: red;
+            width: 100%;
+            padding: 10px 0;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+        
+    </style>
+</head>
+<body class="bodySTYLE">
+
+    <!-- Меню навігації -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+
+        <!-- Випадаюче меню для About -->
+        <div class="dropdown">
+            <a href="#about" onclick="toggleDropdown(event, 'dropdown-about')">About ▼</a>
+            <div id="dropdown-about" class="dropdown-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div>
+
+        <!-- Випадаюче меню для Services -->
+        <div class="dropdown">
+            <a href="#services" onclick="toggleDropdown(event, 'dropdown-services')">Services ▼</a>
+            <div id="dropdown-services" class="dropdown-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div>
+
+        <!-- Випадаюче меню для Partners -->
+        <div class="dropdown">
+            <a href="#partners" onclick="toggleDropdown(event, 'dropdown-partners')">Partners ▼</a>
+            <div id="dropdown-partners" class="dropdown-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div>
+
+        <a href="#contact">Contact</a>
+    </div>
+
+    <script>
+        // Функція для переключення видимості підменю
+        function toggleDropdown(event, dropdownId) {
+            event.preventDefault();
+            const dropdown = document.getElementById(dropdownId);
+            const isVisible = dropdown.style.display === 'block';
+            closeAllDropdowns();
+            if (!isVisible) {
+                dropdown.style.display = 'block';
+            }
+        }
+
+        // Функція для закриття всіх підменю
+        function closeAllDropdowns() {
+            const dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(dropdown => {
+                dropdown.style.display = 'none';
+            });
+        }
+
+        // Закриття підменю при кліку поза ними
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown a')) {
+                closeAllDropdowns();
+            }
+        }
+    </script>
+
+</body>
+</html>
