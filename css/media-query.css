@@ -1,0 +1,15 @@
+@media (min-width: 992px) {
+    .box1 { width: 70%; }
+    .box2 { width: 20%; }
+    .box3, .box4 { width: 25%; }
+    .box5, .box6 { width: 100%; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .box1, .box2 { width: 50%; }
+    .box3, .box4, .box5, .box6 { width: 50%; }
+}
+
+@media (max-width: 767px) {
+    .box1, .box2, .box3, .box4, .box5, .box6 { width: 100%; }
+}
