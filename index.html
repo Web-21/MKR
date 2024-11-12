@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Cards Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Ліва колонка -->
+        <div class="col-md-4 d-flex flex-column">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body">
+                    <h5 class="card-title">Card title that wraps to a new line</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/150" class="card-img" alt="Card image">
+                <div class="card-body">
+                    <p class="card-text">Card image</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Центральна колонка -->
+        <div class="col-md-4 d-flex flex-column">
+            <!-- Блок з цитатою на білому фоні -->
+            <div class="card mb-4 p-4">
+                <blockquote class="blockquote mb-0">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+            </div>
+            <!-- Блок з цитатою на синьому фоні -->
+            <div class="card text-center p-4 bg-primary text-white mb-4">
+                <blockquote class="blockquote mb-0">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer text-white">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+            </div>
+            <!-- Картка з заголовком і коротким текстом -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <!-- Додатковий блок з текстом внизу центральної колонки -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Права колонка -->
+        <div class="col-md-4 d-flex flex-column">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card p-4">
+                <blockquote class="blockquote mb-0">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

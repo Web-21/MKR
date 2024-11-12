@@ -1,0 +1,51 @@
+// styles.scss
+
+$primary-color: #007bff;
+$text-color-light: #fff;
+$text-color-muted: #6c757d;
+
+.card {
+  border: none;
+  margin-bottom: 1rem;
+
+  &-title {
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .card-img-top,
+  .card-img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .blockquote {
+    margin: 0;
+    font-size: 1rem;
+
+    footer {
+      color: $text-color-muted;
+    }
+  }
+
+  &.bg-primary {
+    background-color: $primary-color;
+    color: $text-color-light;
+
+    .blockquote-footer {
+      color: lighten($primary-color, 30%);
+    }
+  }
+}
+
+// Медіа-запити для адаптивності
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
