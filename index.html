@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">  
+    <title>Simple Counter</title>
+</head>
+<body>
+
+<div class="counter-container">
+    <div id="display">0</div>
+    <div class="button-group">
+        <button id="prev">Prev</button>
+        <button id="reset">Reset</button>
+        <button id="next">Next</button>
+    </div>
+</div>
+
+<script>
+    let count = 0;
+
+    const display = document.getElementById('display');
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+    const resetButton = document.getElementById('reset');
+
+    function updateDisplay() {
+        display.textContent = count;
+    }
+
+    nextButton.addEventListener('click', () => {
+        if (count < 100) { 
+            count += 1;
+            updateDisplay();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (count > 0) { 
+            count -= 1;
+            updateDisplay();
+        }
+    });
+
+    
+    resetButton.addEventListener('click', () => {
+        count = 0;
+        updateDisplay();
+    });
+
+    updateDisplay();
+</script>
+</body>
+</html>
